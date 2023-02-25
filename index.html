@@ -1,306 +1,505 @@
 <!doctype html>
 <html lang="en">
-        <head>
-          <title>Personal Webpage</title>
 
-          <style>
-            /*Sets the graduated background*/
-            body{
-                background-image: linear-gradient(to bottom right,
-                 #33475b, #335acf, #640614, #e7481c)
-                }            
-            
-            /*Various Fonts*/    
-            h1 { 
-              color: white;
-              display: inline-block;
-              font-size: 25px;
-              font-weight: bold;
-              font-family:sans-serif;
-              line-height:.1;
-              }
+<head>
+  <title>Personal Webpage</title>
 
-              h2 { 
-                color: white;
-                display: inline-block;
-                font-size: 18px;
-                font-family:sans-serif;
-                line-height:0.01;
-                }
-            
-                h3 { 
-                  margin-left: 19em;
-                  color: white;
-                  display: inline-block;
-                  font-size: 15px;
-                  font-weight: bold;
-                  font-family:sans-serif;
-                  line-height:0.1;
-                  }  
-            
-                  h4 { 
-                    color: white;
-                    display: inline-block;
-                    font-size: 20px;
-                    font-weight: bold;
-                    font-family:sans-serif;
-                    line-height:0.01;
-                    }   
-              
-            /*This is for the typing font (https://css-tricks.com/snippets/css/typewriter-effect/)*/
-            .css-typing p {
-              margin-left: 19em;
-              border-right: 0em solid white;
-              font-family: sans-serif;
-              color: white;
-              font-size:18px;
-              white-space: nowrap;
-              overflow: hidden
-            }
-              /*Line1*/
-              .css-typing p:nth-child(1) {
-                width: 60em;
-                -webkit-animation: type 2s steps(40, end);
-                animation: type 2s steps(40, end);
-                -webkit-animation-fill-mode: forwards;
-                animation-fill-mode: forwards;
-                }
-                /*Line2*/
-                .css-typing p:nth-child(2) {
-                  width: 60em;
-                  opacity: 0;
-                  -webkit-animation: type2 2s steps(40, end);
-                  animation: type2 2s steps(40, end);
-                  -webkit-animation-delay: 2s;
-                  animation-delay: 2s;
-                  -webkit-animation-fill-mode: forwards;
-                  animation-fill-mode: forwards;
-                }
-                  /*Line3*/
-                  .css-typing p:nth-child(3) {
-                    width: 60em;
-                    opacity: 0;
-                    -webkit-animation: type3 2s steps(40, end);
-                    animation: type3 2s steps(40, end);
-                    -webkit-animation-delay: 4s;
-                    animation-delay: 4s;
-                    -webkit-animation-fill-mode: forwards;
-                    animation-fill-mode: forwards;
-                  }
-                    /*This is to end the typing cursor*/
-                    .css-typing p:nth-child(4) {
-                      width: 0;
-                      opacity: 0;
-                    }
-            /*Line 1*/
-            @keyframes type {
-              0% {
-                width: 0;
-              }
-              99.9% {
-                border-right: .15em solid white;
-              }
-              100% {
-                border: none;
-              }
-            }
+  <style>
+    body {
+      /*Sets the graduated background*/
+      background-image: linear-gradient(to bottom right,
+          #33475b, #335acf, #640614, #e7481c);
+      width: 100%;
+    }
 
-            @-webkit-keyframes type {
-              0% {
-                width: 0;
-              }
-              99.9% {
-                border-right: .15em solid white;
-              }
-              100% {
-                border: none;
-              }
-            }
-              /*Line 2*/
-              @keyframes type2 {
-                0% {
-                  width: 0;
-                }
-                1% {
-                  opacity: 1;
-                }
-                99.9% {
-                  border-right: .15em solid white;
-                }
-                100% {
-                  opacity: 1;
-                  border: none;
-                }
-              }
+    #container {
+      margin: auto;
+      display: grid;
+      grid-template-columns: 350px 200px 300px auto;
+      grid-template-rows: 180px 330px auto;
+      text-align: left;
+    }
 
-              @-webkit-keyframes type2 {
-                0% {
-                  width: 0;
-                }
-                1% {
-                  opacity: 1;
-                }
-                99.9% {
-                  border-right: .15em solid white;
-                }
-                100% {
-                  opacity: 1;
-                  border: none;
-                }
-              }
-                  /*Line 3*/
-                  @keyframes type3 {
-                    0% {
-                      width: 0;
-                    }
-                    1% {
-                      opacity: 1;
-                    }
-                    100% {
-                      opacity: 1;
-                      border: none;
-                    }
-                  }
+    #img1 {
+      grid-column: 1/1;
+      grid-row: 1/1;
+      padding: 20px;
+    }
 
-                  @-webkit-keyframes type3 {
-                    0% {
-                      width: 0;
-                    }
-                    1% {
-                      opacity: 1;
-                    }
-                    100% {
-                      opacity: 1;
-                      border: none;
-                    }
-                  }
+    #img2 {
+      grid-column: 1/1;
+      grid-row: 3/3;
+      padding-left: 180px;
+    }
 
-            /*Cursor blink*/      
-            @keyframes blink {
-              50% {
-                border-color: transparent;
-              }
-            }
-            @-webkit-keyframes blink {
-              50% {
-                border-color: tranparent;
-              }
-            }
-            /*Floats image*/
-            img {
-            float: left; padding: 20px
-            }
-          </style>
+    #column2 {
+      grid-column: 2/2;
+      grid-row: 2/2;
+    }
 
-        </head>    
-       
-        <body>
-          <!--laptop image-->
-          <img src="laptop_me.png" height="300px"></p>
-            <br><br><br>
+    #column3 {
+      grid-column: 3/3;
+      grid-row: 2/2;
+    }
 
-          <!--Typing Text-->
-          <div class="css-typing">
-            <p>Hello, I am looking to change my career into Software 
-              Engineering
-               and so have undertaken a Software Engineering bootcamp.</p>
-            <p>I have really enjoyed the technical challenges, problem
-               solving and 
-              creating solutions. I have a lot of skills from my
-               previous jobs,</p>  
-            <p>and am ready to take these skills into a new role. I am loyal, 
-              hard working and eager to keep learning more.</p>
-            <p>BLANK</p>
-          </div>
-
-          <!--Skills Section-->
-          <h2>
-          <pre>  
-            <p><u>Dev Skills</u>             <u>Working Skills</u>                      <u>Technical Profiles</u></p>  
-            <p>• Python               • Creative problem solving          • linkedin.com/in/richard-barnett-a9924b259</p>
-            <p>• Databases            • Logical thinking                  • github.com/RB-Git-Hub</p>
-            <p>• CSS                  • Attention to detail               • hyperiondev.com/portfolio/121434</p>
-            <p>• SQL                  • Multitasking</p>
-            <p>• Danjo                • Positive and self motivated</p>
-            <p>• GitHub               • Time management</p>
-            <p>                       • Team collaboration</p>
-            <p>                       • Business Acumen</p> 
-          </h2>
-
-          <!--Hyperlinks-->
-           <h3>
-           <pre>
-            <p><h2><a href="https://www.hyperiondev.com/portfolio/121434/" 
-              style="color:#e79242"; target="_blank"; 
-              text-align: left><b><u><i>>Click here< to take a look at my Software Engineering Bootcamp progression</i></u></b></a></h2>
-            <p>>>> Some of my tasks detailed can be found on my <a href="https://github.com/RB-Git-Hub" 
-              style="color:#e79242"; target="_blank"><u><i>GitHub</i></u></a></p>
-            <p></p>
-
-            <!--Recent task-->
-            <p><h2><u>A Recent Task</u></h2></p>
-            <p>Recently i had to write a warehouse inventory program for a shoe supplier, I thought I would investigate Tkinter</p>
-            <p>as a graphical user interface to make it look special and I was able to construct a full screen system, with a menu,</p>
-            <p>forms with entry boxese etc. and link the required functions so it displayed as required.</p>
+    #column4 {
+      grid-column: 4/4;
+      grid-row: 2/2;
+    }
 
 
+    #typingSection {
+      grid-column: 2/4;
+      grid-row: 1/1;
+    }
 
-            <p><a href="https://github.com/RB-Git-Hub/finalCapstone/tree/main
-              /inventory" style="color:#e79242";target="_blank"><u><i>>Click here< and take a look</i></u></a></p>
-          
-          </h3>
+    #mainSection {
+      grid-column: 2/4;
+      grid-row: 3/3;
+      white-space: nowrap;
+      padding-top: 48px;
+    }
 
-          <!--Work Experience-->
-          <h3>
-          <pre>  
-            <p><h1><u>Work Experience</u></h1></p> 
-            
-            <p><h4>Hyperion Dev & Imperial College London</h4>
-            <p><h2><i>Software Engineer Bootcamp</i></h2>
-            <p>Dec 2022 - PRESENT</p>
-            <p>Building applications, having object oriented programming and agile development, 
-            <p>Implementing computer science algorithms. </p>
-              <p> </p> 
+    /*Various Fonts*/
+    h1 {
+      color: rgb(246, 233, 215);
+      font-size: 25px;
+      font-weight: bold;
+      font-family: sans-serif;
+      line-height: 10px;
+    }
 
-            <p><h4>John Lewis and Partners (Waitrose) (P/T)</h4>
-            <p><h2><i>Customer Delivery Driver</i></h2>
-            <p>Oct 2020 - PRESENT</p>
-            <p>Delivering shopping to customers along with excellent customer service.</p>
-              <p> </p> 
+    h2 {
+      color: rgb(246, 233, 215);
+      font-size: 21px;
+      font-family: sans-serif;
+      line-height: 10px;
+    }
 
-            <p><h4>Self Employed</h4>
-            <p><h2><i>Optical Laboratory Manager</i></h2>
-            <p>Oct 2016 - PRESENT</p>
-            <p>Built a business providing optical services to a specialist optical provider, 
-            <p>liaising with their team,
-            <p>the process to fit with their way of working, providing a full proficient service.</p>
-              <p> </p> 
+    h3 {
+      color: rgb(165, 187, 243);
+      font-size: 19px;
+      font-weight: bold;
+      font-family: sans-serif;
+      line-height: 10px;
+    }
 
-            <p><h4>Focus Optical Laboratories</h4>
-            <p><h2><i>Customer Service Manager</i></h2>
-            <p>Aug 2007 - Oct 2016</p>
-            <p>Working with the team I established good relationships with customers,
-            <p>tailoring the process to provide for their needs.
-            <p>I created a system that flagged jobs that were behind,
-            <p>keeping the customer informed every step of  the way.</p> 
-              <p> </p> 
+    h3w {
+      color: rgb(246, 233, 215);
+      font-size: 19px;
+      font-weight: bold;
+      font-family: sans-serif;
+      line-height: 10px;
+    }
 
-            <p><h4>Surrey County Council</h4>
-            <p><h2><i>Special Needs Teaching Assistant</i></h2>
-            <p>May 2000 - Aug 2007</p>
-            <p>Supported the teacher and other staff with daily tasks enabling
-            <p>the students to fulfill their potential.</p>
-              <p> </p> 
+    h4 {
+      color: rgb(246, 233, 215);
+      font-size: 14px;
+      font-weight: bold;
+      font-family: sans-serif;
+      line-height: 10px;
+    }
 
-            <p><h4>Field Systems Designs</h4>
-            <p><h2><i>Tendering Engineer</i></h2>
-            <p>Oct 1996 - May 2000</p>
-            <p>I estimated the installation of electrical plant in industrial settings.
-            <p>Undertaking site visits, examining plans and using extensive databases,   
-            <p>I was able to produce comprehensive competitive tenders.</p>
-              <p> </p> 
-          </h3>
-          
-        </body>  
-    </table>      
+    /*This is for the typing font (https://css-tricks.com/snippets/css/typewriter-effect/)*/
+    .css-typing p {
+      border-right: 0em solid white;
+      font-family: sans-serif;
+      color: rgb(246, 233, 215);
+      font-size: 19px;
+      white-space: nowrap;
+      overflow: hidden
+    }
+
+    /*Line1*/
+    .css-typing p:nth-child(1) {
+      width: 60em;
+      -webkit-animation: type 2s steps(40, end);
+      animation: type 2s steps(40, end);
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+
+    /*Line2*/
+    .css-typing p:nth-child(2) {
+      width: 60em;
+      opacity: 0;
+      -webkit-animation: type2 2s steps(40, end);
+      animation: type2 2s steps(40, end);
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+
+    /*Line3*/
+    .css-typing p:nth-child(3) {
+      width: 60em;
+      opacity: 0;
+      -webkit-animation: type3 2s steps(40, end);
+      animation: type3 2s steps(40, end);
+      -webkit-animation-delay: 4s;
+      animation-delay: 4s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+
+    /*This is to end the typing cursor*/
+    .css-typing p:nth-child(4) {
+      width: 0;
+      opacity: 0;
+    }
+
+    /*Line 1*/
+    @keyframes type {
+      0% {
+        width: 0;
+      }
+
+      99.9% {
+        border-right: .15em solid white;
+      }
+
+      100% {
+        border: none;
+      }
+    }
+
+    @-webkit-keyframes type {
+      0% {
+        width: 0;
+      }
+
+      99.9% {
+        border-right: .15em solid white;
+      }
+
+      100% {
+        border: none;
+      }
+    }
+
+    /*Line 2*/
+    @keyframes type2 {
+      0% {
+        width: 0;
+      }
+
+      1% {
+        opacity: 1;
+      }
+
+      99.9% {
+        border-right: .15em solid white;
+      }
+
+      100% {
+        opacity: 1;
+        border: none;
+      }
+    }
+
+    @-webkit-keyframes type2 {
+      0% {
+        width: 0;
+      }
+
+      1% {
+        opacity: 1;
+      }
+
+      99.9% {
+        border-right: .15em solid white;
+      }
+
+      100% {
+        opacity: 1;
+        border: none;
+      }
+    }
+
+    /*Line 3*/
+    @keyframes type3 {
+      0% {
+        width: 0;
+      }
+
+      1% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 1;
+        border: none;
+      }
+    }
+
+    @-webkit-keyframes type3 {
+      0% {
+        width: 0;
+      }
+
+      1% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 1;
+        border: none;
+      }
+    }
+
+    /*Cursor blink*/
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    @-webkit-keyframes blink {
+      50% {
+        border-color: tranparent;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="container">
+
+    <!--laptop image-->
+    <div id="img1">
+      <img src="laptop_me.png" height="300px"></p>
+    </div>
+
+    <!--Typing Text-->
+    <div id="typingSection">
+      <div class="css-typing">
+        <p>Hello, I am looking to change my career into Software
+          Engineering
+          and so have undertaken a Software Engineering bootcamp.</p>
+        <p>I have really enjoyed the technical challenges, problem
+          solving and
+          creating solutions. I have a lot of skills from my
+          previous jobs,</p>
+        <p>and am ready to take these skills into a new role. I am loyal,
+          hard working and eager to keep learning more.</p>
+        <p>BLANK</p>
+      </div>
+    </div>
+
+    <!--DEV Skills-->
+    <div id="column2">
+      <h2>
+        <p><u>Dev Skills</u></p>
+        <br>
+      </h2>
+      <h3w>
+        <p>
+          <li>Python</li>
+        </p>
+        <p>
+          <li>HTML</li>
+        </p>
+        <p>
+          <li>Databases</li>
+        </p>
+        <p>
+          <li>CSS</li>
+        </p>
+        <p>
+          <li>SQL</li>
+        </p>
+        <p>
+          <li>Danjo</li>
+        </p>
+        <p>
+          <li>GitHub</li>
+        </p>
+      </h3w>
+    </div>
+
+    <!--Working Skills-->
+    <div id="column3">
+      <h2>
+        <p><u>Working Skills</u></p>
+        <br>
+      </h2>
+      <h3w>
+        <p>
+          <li>Creative problem solving</li>
+        </p>
+        <p>
+          <li>Logical thinking</li>
+        </p>
+        <p>
+          <li>Attention to detail</li>
+        </p>
+        <p>
+          <li>Multitasking</li>
+        </p>
+        <p>
+          <li>Positive and self motivated</li>
+        </p>
+        <p>
+          <li>Time management</li>
+        </p>
+        <p>
+          <li>Team collaboration</li>
+        </p>
+        <p>
+          <li>Business Acumen</li>
+        </p>
+      </h3w>
+    </div>
+    <!--Technical Profiles-->
+    <div id="column4">
+      <h2>
+        <p><u>Technical Profiles</u></p>
+        <br>
+      </h2>
+      <h3w>
+        <p> </p>
+        <p>
+          <li>linkedin.com/in/richard-barnett-a9924b259</li>
+        </p>
+        <p>
+          <li>github.com/RB-Git-Hub</li>
+        </p>
+        <p>
+          <li>https://www.hyperiondev.com/portfolio/121434</li>
+        </p>
+      </h3w>
+    </div>
+
+    <!--laptop image-->
+    <div id="img2">
+      <img src="arrow.gif" height="150px"></p>
+    </div>
+
+
+
+
+    <!--MAIN SECTION-->
+    <div id="mainSection">
+      <!--Hyperlinks-->
+      <p>
+      <h2><a href="https://www.hyperiondev.com/portfolio/121434/" style="color:#e79242" ; target="_blank" ; text-align:
+          left><b><u><i>>Click here< to take a look at my Software Engineering Bootcamp progression</i></u></b></a></h2>
+      </p>
+      <br>
+      <p>
+        <h3w>>>> Some of my tasks detailed can be found on my <a href="https://github.com/RB-Git-Hub"
+            style="color:#e79242" ; target="_blank"><u><i>GitHub</i></u></a></h3w>
+      </p>
+      <br><br>
+
+      <!--Recent task-->
+      <p>
+      <h2><u>A Recent Task</u></h2>
+      </p>
+      <br>
+      <h3w>
+        <p>Recently i had to write a warehouse inventory program for a shoe supplier, I thought I would investigate
+          Tkinter</p>
+        <p>as a graphical user interface to make it look special and I was able to construct a full screen system, with
+          a menu,</p>
+        <p>forms with entry boxese etc and link the required functions so it displayed as required.</p>
+      </h3w>
+
+
+
+      <h3>
+        <p><a href="https://github.com/RB-Git-Hub/finalCapstone/tree/main
+                /inventory" style="color:#e79242" ;target="_blank"><u><i>>click here< and take a look</i></u></a></p>
+      </h3>
+      <br><br>
+
+
+      <!--Work Experience-->
+      <p>
+      <h2><u>Work Experience</u></h2>
+      </p>
+      <br>
+      <p>
+      <h3><b>Hyperion Dev & Imperial College London</b></h3>
+      </p>
+      <h4>
+        <p><i>Software Engineer Bootcamp</i></p>
+        <p>Dec 2022 - Present</p>
+        <br>
+        <p>Building applications, having object oriented programming and agile development,</p>
+        <p>Implementing computer science algorithms.</p>
+      </h4>
+      <br>
+      <br>
+      <p>
+      <h3>John Lewis and Partners (Waitrose) (P/T)</h3>
+      </p>
+      <h4>
+        <p><i>Customer Delivery Driver</i></p>
+        <p>Oct 2020 - Present</p>
+        <br>
+        <p>Delivering shopping to customers along with excellent customer service.</p>
+      </h4>
+      <br>
+      <br>
+      <p>
+      <h3>Self Employed</h3>
+      </p>
+      <h4>
+        <p><i>Optical Laboratory Manager</i></p>
+        <p>Oct 2016 - Present</p>
+        <br>
+        <p>Built a business providing optical services to a specialist optical provider,</p>
+        <p>liaising with their team,</p>
+        <p>the process to fit with their way of working, providing a full proficient service.</p>
+      </h4>
+      <br>
+      <br>
+      <p>
+      <h3>Focus Optical Laboratories</h3>
+      </p>
+      <h4>
+        <p><i>Customer Service Manager</i></p>
+        <p>Aug 2007 - Oct 2016</p>
+        <br>
+        <p>Working with the team I established good relationships with customers,</p>
+        <p>tailoring the process to provide for their needs.</p>
+        <p>I created a system that flagged jobs that were behind,</p>
+        <p>keeping the customer informed every step of the way.</p>
+      </h4>
+      <br>
+      <br>
+      <p>
+      <h3>Surrey County Council</h3>
+      </p>
+      <h4>
+        <p><i>Special Needs Teaching Assistant</i></p>
+        <p>May 2000 - Aug 2007</p>
+        <br>
+        <p>Supported the teacher and other staff with daily tasks enabling</p>
+        <p>the students to fulfill their potential.</p>
+      </h4>
+      <br>
+      <br>
+      <p>
+      <h3>Field Systems Designs</h3>
+      </p>
+      <h4>
+        <p><i>Tendering Engineer</i></p>
+        <p>Oct 1996 - May 2000</p>
+        <br>
+        <p>I estimated the installation of electrical plant in industrial settings.</p>
+        <p>Undertaking site visits, examining plans and using extensive databases,</p>
+        <p>I was able to produce comprehensive competitive tenders.</p>
+      </h4>
+      <br><br>
+
+
+    </div>
+  </div>
+</body>
+</table>
+
 </html>
